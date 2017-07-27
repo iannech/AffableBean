@@ -1,0 +1,9 @@
+<!--Repetitive code on the views-->       
+            <div id="footer">
+                <hr>
+                <p id="footerText">[ footer text]</p>
+                <!--&COPY;iannech 2017-->
+            </div>
+        </div>
+    </body>
+</html>
