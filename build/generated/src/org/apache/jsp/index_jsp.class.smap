@@ -3,8 +3,27 @@ index_jsp.java
 JSP
 *S JSP
 *F
-+ 0 index.jsp
++ 0 header.jspf
+WEB-INF/jspf/header.jspf
++ 1 index.jsp
 index.jsp
++ 2 footer.jspf
+WEB-INF/jspf/footer.jspf
 *L
-5,14:44
+1,29:63
+1#1,2:92
+7,2:94
+9:147,17
+10,2:164
+11,7:98
+18,2:105,3
+20,4:111
+23:192,11
+24:203
+25,2:204,3
+27:210,4
+28:214,3
+29,3:217
+31,4:117
+1#2,9:120
 *E
