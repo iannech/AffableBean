@@ -23,7 +23,9 @@
     <c:forEach var="category" items="${categories.rows}">
         <div class="categoryBox">
             <a href="category?${category.id}">
+                
                 <span class="categoryLabelText">${category.name}</span>
+                
                 <img src="${initParam.categoryImagePath}${category.name}.jpg" 
                      alt="${category.name}">
             </a>
