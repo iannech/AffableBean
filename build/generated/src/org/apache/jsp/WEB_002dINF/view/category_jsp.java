@@ -129,6 +129,7 @@ public final class category_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</div>\n");
       out.write("\n");
       out.write("<div id=\"categoryRightColumn\">\n");
+      out.write("\n");
       out.write("    <p id=\"categoryTitle\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${selectedCategory.rows[0].name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</p>\n");
@@ -497,7 +498,7 @@ public final class category_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_c_forEach_1.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_1.setParent(null);
     _jspx_th_c_forEach_1.setVar("product");
-    _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${categoryProducts.row}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${categoryProducts.rows}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_1.setVarStatus("iter");
     int[] _jspx_push_body_count_c_forEach_1 = new int[] { 0 };
     try {
@@ -507,13 +508,13 @@ public final class category_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\n");
           out.write("\n");
           out.write("            <tr class=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${((iter.index % 2) == 0) ? 'lightBlue' : 'white' }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\"> <!--determines background color for table rows-->\n");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${((iter.index % 2) == 0) ? 'lightBlue' : 'white'}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\">\n");
           out.write("                <td>\n");
           out.write("                    <img src=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${initParam.productImagePath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write(".png\" \n");
+          out.write(".png\"\n");
           out.write("                         alt=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">\n");
@@ -523,14 +524,14 @@ public final class category_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\n");
           out.write("                    <br>\n");
-          out.write("                    <<span class=\"smallText\">");
+          out.write("                    <span class=\"smallText\">");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.description}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</span>\n");
           out.write("                </td>\n");
           out.write("                <td>\n");
           out.write("                    &euro; ");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.price}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write(" / unit \n");
+          out.write(" / unit\n");
           out.write("                </td>\n");
           out.write("                <td>\n");
           out.write("                    <form action=\"addToCart\" method=\"post\">\n");
@@ -544,6 +545,7 @@ public final class category_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                    </form>\n");
           out.write("                </td>\n");
           out.write("            </tr>\n");
+          out.write("\n");
           out.write("        ");
           int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
