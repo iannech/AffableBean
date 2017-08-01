@@ -16,7 +16,9 @@
                     <div class="headerWidget">
                         [ language toggle ]
                     </div>
-                    
+                    <div class="headerWidget">
+                        [ checkout button ]
+                    </div>
                     <div class="headerWidget">
                         [ shopping cart widget ]
                     </div>
