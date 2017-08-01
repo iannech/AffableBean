@@ -1,8 +1,12 @@
 <!--Repetitive code on the views-->       
             <div id="footer">
                 <hr>
-                <p id="footerText">[ footer text]</p>
-                <!--&COPY;iannech 2017-->
+                <p id="footerText" class="reallySmallText">
+                    <a href="#">Privacy Policy</a>
+                    &nbsp;&nbsp;::&nbsp;&nbsp;
+                    <a href="#">Contact</a>
+                    &nbsp;&nbsp;&copy;&nbsp;&nbsp;
+                    2017 the affable bean</p>
             </div>
         </div>
     </body>

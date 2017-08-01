@@ -18,7 +18,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_query_var_dataSource;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -28,12 +27,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_sql_query_var_dataSource = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
-    _jspx_tagPool_sql_query_var_dataSource.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -93,15 +90,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write('\n');
       out.write('\n');
       out.write('\n');
-      if (_jspx_meth_sql_query_0(_jspx_page_context))
-        return;
       out.write("\n");
       out.write("\n");
       out.write("<div id=\"indexLeftColumn\">\n");
       out.write("    <div id=\"welcomeText\">\n");
       out.write("        <p>[ welcome text ]</p>\n");
       out.write("\n");
-      out.write("        <!--test to access context parameters-->\n");
+      out.write("        \n");
       out.write("        categoryImagePath: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${initParam.categoryImagePath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\n");
@@ -139,51 +134,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     }
   }
 
-  private boolean _jspx_meth_sql_query_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:query
-    org.apache.taglibs.standard.tag.rt.sql.QueryTag _jspx_th_sql_query_0 = (org.apache.taglibs.standard.tag.rt.sql.QueryTag) _jspx_tagPool_sql_query_var_dataSource.get(org.apache.taglibs.standard.tag.rt.sql.QueryTag.class);
-    _jspx_th_sql_query_0.setPageContext(_jspx_page_context);
-    _jspx_th_sql_query_0.setParent(null);
-    _jspx_th_sql_query_0.setVar("categories");
-    _jspx_th_sql_query_0.setDataSource(new String("jdbc/affablebean"));
-    int[] _jspx_push_body_count_sql_query_0 = new int[] { 0 };
-    try {
-      int _jspx_eval_sql_query_0 = _jspx_th_sql_query_0.doStartTag();
-      if (_jspx_eval_sql_query_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_sql_query_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_push_body_count_sql_query_0[0]++;
-          _jspx_th_sql_query_0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_sql_query_0.doInitBody();
-        }
-        do {
-          out.write("\n");
-          out.write("    SELECT * FROM category\n");
-          int evalDoAfterBody = _jspx_th_sql_query_0.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_sql_query_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
-          out = _jspx_page_context.popBody();
-          _jspx_push_body_count_sql_query_0[0]--;
-      }
-      if (_jspx_th_sql_query_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_sql_query_0[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_sql_query_0.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_sql_query_0.doFinally();
-      _jspx_tagPool_sql_query_var_dataSource.reuse(_jspx_th_sql_query_0);
-    }
-    return false;
-  }
-
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -193,7 +143,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
     _jspx_th_c_forEach_0.setVar("category");
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${categories.rows}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${categories}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
@@ -204,9 +154,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("            <a href=\"category?");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${category.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">\n");
+          out.write("                \n");
           out.write("                <span class=\"categoryLabelText\">");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${category.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</span>\n");
+          out.write("                \n");
           out.write("                <img src=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${initParam.categoryImagePath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${category.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
