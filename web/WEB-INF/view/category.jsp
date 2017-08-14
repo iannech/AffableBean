@@ -1,5 +1,3 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
     Document   : category
     Created on : Jul 27, 2017, 9:36:07 PM
@@ -22,8 +20,9 @@
 <div id="categoryLeftColumn">
 
     <c:forEach var="category" items="${categories}">
+
         <c:choose>
-            <c:when test="${category.id == pageContext.request.queryString}">
+            <c:when test="${category.name == selectedCategory.name}">
                 <div class="categoryButton" id="selectedCategory">
                     <span class="categoryText">
                         ${category.name}
@@ -32,9 +31,9 @@
             </c:when>
             <c:otherwise>
                 <a href="category?${category.id}" class="categoryButton">
-                    <div class="categoryText">
+                    <span class="categoryText">
                         ${category.name}
-                    </div>
+                    </span>
                 </a>
             </c:otherwise>
         </c:choose>
@@ -45,9 +44,7 @@
 
 <div id="categoryRightColumn">
 
-    <p id="categoryTitle">
-        <span style="background-color: #f5eabe; padding: 7px;">${selectedCategory.name}</span>
-    </p>
+    <p id="categoryTitle">${selectedCategory.name}</p>
 
     <table id="productTable">
         <c:forEach var="product" items="${categoryProducts}" varStatus="iter">

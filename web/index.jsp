@@ -1,5 +1,3 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
     Document   : index
     Created on : Jul 26, 2017, 9:49:33 PM
@@ -25,13 +23,12 @@
     <c:forEach var="category" items="${categories}">
         <div class="categoryBox">
             <a href="category?${category.id}">
-
+                <span class="categoryLabel"></span>
                 <span class="categoryLabelText">${category.name}</span>
 
-                <img src="${initParam.categoryImagePath}${category.name}.jpg" 
-                     alt="${category.name}">
+                <img src="${initParam.categoryImagePath}${category.name}.jpg"
+                     alt="${category.name}" class="categoryImage">
             </a>
         </div>
     </c:forEach>
 </div>
-
